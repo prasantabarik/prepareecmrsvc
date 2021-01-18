@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service
 import org.springframework.beans.factory.annotation.Autowired
 
 @Service
-class Consumer() {
+class Consumer {
 
     @Autowired
     lateinit var producer: Producer
@@ -40,6 +40,8 @@ class Consumer() {
                 .onEvent(PreECMR::class.java) { dee: DomainEventEnvelope<PreECMR> -> run {
                     val pre: PreECMR = dee.event
                     println(pre.shipment_id)
+
+
                     val result = Utility.convert(BASE_URI + pre.shipment_id, ASN())
                     println(result)
                     prepareJson.manipulation(result)

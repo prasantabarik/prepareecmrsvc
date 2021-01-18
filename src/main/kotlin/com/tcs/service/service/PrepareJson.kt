@@ -2,29 +2,25 @@ package com.tcs.service.service
 
 import com.tcs.service.model.*
 import com.tcs.service.repo.ECMRRepo
-import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
+import java.time.LocalDateTime
 import java.util.stream.Collectors
 
 @Service
 class PrepareJson(private var ecmrRepo: ECMRRepo) {
 
-//    @Autowired
-//    lateinit var ecmrRepo: ECMRRepo
 
     fun manipulation(result: MutableList<ASN>?) {
         println(result?.size)
 
         val posts: MutableList<ASN>? = result
-        var ecmrList: MutableList<ECMR> = mutableListOf()
+        val ecmrList: MutableList<ECMR> = mutableListOf()
 
         val postsPerType = posts?.stream()
                 ?.collect(Collectors.groupingBy(ASN::departureId,
                         Collectors.groupingBy(ASN::glnshipfrom,
                                 Collectors.groupingBy(ASN::glnshipto,
                                         Collectors.groupingBy(ASN::referencenumberoftrip)))))
-
-        println(postsPerType)
 
         if (postsPerType != null) {
             for ((k, v) in postsPerType) {
@@ -39,12 +35,12 @@ class PrepareJson(private var ecmrRepo: ECMRRepo) {
                                             Collectors.groupingBy(ASN::shipunitsscc,
                                                     Collectors.groupingBy(ASN::totalloadweight))))
 
-                            var shipUnit: MutableList<ShipUnit> = mutableListOf()
+                            val shipUnit: MutableList<ShipUnit> = mutableListOf()
                             if (shipsPerType != null) {
                                 for ((k4,v4) in shipsPerType){
                                     for ((k5,v5) in v4){
                                         for ((k6,v6) in v5){
-                                            var containerInShipItems: MutableList<ContainerInShipItems> = mutableListOf()
+                                            val containerInShipItems: MutableList<ContainerInShipItems> = mutableListOf()
                                             for (i in 0 until v6.size){
                                                 containerInShipItems.add(ContainerInShipItems(v6[i].containertypegtin,
                                                         v6[i].numberofcontainers))
@@ -57,13 +53,16 @@ class PrepareJson(private var ecmrRepo: ECMRRepo) {
                                     }
                                 }
                             }
-                            var orderInShipment: MutableList<OrderInShipment>? =
+                            val orderInShipment: MutableList<OrderInShipment> =
                                     mutableListOf(OrderInShipment(v3[0].refnumberpointofdestination, shipUnit))
 
-                            var ecmr =  ECMR(v3[0].departureId, v3[0].departureId+v3[0].glnshipfrom+v3[0].glnshipto,
-                                    "current time", null, v3[0].glnshipfrom,
-                                    v3[0].glnshipto, v3[0].referencenumberoftrip, "2021", v3[0].finishedloadingdatetime,
-                                    null, null, false, orderInShipment)
+                            val ecmr =  ECMR(v3[0].departureId+v3[0].glnshipfrom+v3[0].glnshipto,
+                                    v3[0].departureId, v3[0].departureId+v3[0].glnshipfrom+v3[0].glnshipto,
+                                    LocalDateTime.now().toString(), null, v3[0].glnshipfrom,
+                                    v3[0].glnshipto, v3[0].referencenumberoftrip, v3[0].finishedloadingdatetime.substring(0,4),
+                                    v3[0].finishedloadingdatetime, null, null, false,
+                                    "Not Created", orderInShipment)
+
 
                             ecmrList.add(ecmr)
                         }

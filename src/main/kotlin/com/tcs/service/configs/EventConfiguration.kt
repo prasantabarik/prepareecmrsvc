@@ -23,6 +23,6 @@ class EventConfiguration {
 
     @Bean
     fun domainEventDispatcher(consumer: Consumer, domainEventDispatcherFactory: DomainEventDispatcherFactory): DomainEventDispatcher? {
-        return domainEventDispatcherFactory.make("PrepareECMRConsumer", consumer.domainEventHandlers())
+        return domainEventDispatcherFactory.make("PostECMRConsumer", consumer.domainEventHandlers())
     }
 }

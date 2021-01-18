@@ -8,8 +8,9 @@ import javax.persistence.Id
 @Document(collection = "ecmr")
 data class ECMR (
 
-        var shipmentId: String = "",
         @Id
+        var id: String,
+        var shipmentId: String = "",
         var messageNo: String,
         var messageCreationDateTime: String,
         var testIndicator: String?,
@@ -19,7 +20,8 @@ data class ECMR (
         var yearOfTrip: String,
         var finishedLoadingDateTime: String,
         var freightDocumentId: String?,
-        var arcCode: String? ,
+        var arcCode: String?,
         var arcCodeNeeded: Boolean = false,
+        var statusFlag: String = "Not Created",
         var orderInShipment: MutableList<OrderInShipment>?
 )
