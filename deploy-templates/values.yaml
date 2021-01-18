@@ -1,0 +1,19 @@
+name: prepareecmrsvc
+namespace: ""
+cdPipelineName: ""
+cdPipelineStageName: ""
+dnsWildcard: 59ae6b648ca3437aae3a.westeurope.aksapp.io
+framework: java11
+
+database:
+  required: false
+
+
+ingress:
+  required: true
+  site: prepareecmrsvc
+  path: /api
+
+image:
+  name: prepareecmrsvc
+  version: latest
