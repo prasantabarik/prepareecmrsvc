@@ -5,7 +5,7 @@ import java.util.*
 import javax.persistence.Id
 
 
-@Document(collection = "ecmr")
+@Document(collection = "ecmr1")
 data class ECMR (
 
         @Id
