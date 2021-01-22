@@ -37,6 +37,7 @@ class Consumer {
             //        println(result)
                     prepareJson.manipulation(result)
 
+                    logger.debug("Message DB Called")
                     producer.create(PostECMR(pre.shipment_id))
                 }
 

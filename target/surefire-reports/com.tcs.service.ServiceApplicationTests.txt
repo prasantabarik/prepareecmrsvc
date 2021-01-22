@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.tcs.service.ServiceApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 52.172 s - in com.tcs.service.ServiceApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.665 s - in com.tcs.service.ServiceApplicationTests
