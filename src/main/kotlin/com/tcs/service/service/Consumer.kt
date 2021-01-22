@@ -31,6 +31,7 @@ class Consumer {
                 .onEvent(PreECMR::class.java) { dee: DomainEventEnvelope<PreECMR> -> run {
                     val pre: PreECMR = dee.event
                     println(pre.shipment_id)
+                    logger.info("API Called")
                    logger.debug("API Called")
 
                     val result = Utility.convert(BASE_URI + pre.shipment_id, ASN())
@@ -38,6 +39,7 @@ class Consumer {
                     prepareJson.manipulation(result)
 
                     logger.debug("Message DB Called")
+                    logger.info("Message DB Called")
                     producer.create(PostECMR(pre.shipment_id))
                 }
 

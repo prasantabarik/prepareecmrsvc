@@ -71,8 +71,8 @@ class PrepareJson(private var ecmrRepo: ECMRRepo) {
             }
         }
 
-        println("ECMR LIST")
-        println(ecmrList)
+//        println("ECMR LIST")
+//        println(ecmrList)
 
         for(i in 0 until ecmrList.size){
             ecmrRepo.save(ecmrList[i])
