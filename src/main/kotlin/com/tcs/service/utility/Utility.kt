@@ -4,7 +4,7 @@ import com.fasterxml.jackson.databind.DeserializationFeature
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.registerKotlinModule
 import com.tcs.service.model.ASN
-import org.json
+import org.json.JSONObject
 import khttp.*
 
 object Utility {
