@@ -9,6 +9,7 @@ import com.tcs.service.utility.Utility
 import io.eventuate.tram.events.subscriber.DomainEventEnvelope
 import io.eventuate.tram.events.subscriber.DomainEventHandlers
 import io.eventuate.tram.events.subscriber.DomainEventHandlersBuilder
+import org.apache.logging.log4j.kotlin.logger
 import org.springframework.stereotype.Service
 import org.springframework.beans.factory.annotation.Autowired
 
@@ -21,18 +22,8 @@ class Consumer {
     @Autowired
     lateinit var prepareJson: PrepareJson
 
+    val logger = logger()
 
-//    fun domainEventHandlers(): DomainEventHandlers {
-
-//        return DomainEventHandlersBuilder
-//                .forAggregateType(PostECMR::class.java.name)
-//                .onEvent(PostEcmrEvent::class.java) { dee: DomainEventEnvelope<PostEcmrEvent> ->
-//                    val postEcmrEvent: PostEcmrEvent = dee.event
-//                    println("dee.message.payload")
-//                    println(postEcmrEvent)
-//                }.build()
-//    }
-//
     fun domainEventHandlers(): DomainEventHandlers {
 
         return DomainEventHandlersBuilder
@@ -40,19 +31,17 @@ class Consumer {
                 .onEvent(PreECMR::class.java) { dee: DomainEventEnvelope<PreECMR> -> run {
                     val pre: PreECMR = dee.event
                     println(pre.shipment_id)
-
+                    logger.info("API Called")
+                   logger.debug("API Called")
 
                     val result = Utility.convert(BASE_URI + pre.shipment_id, ASN())
-                    println(result)
+            //        println(result)
                     prepareJson.manipulation(result)
 
+                    logger.debug("Message DB Called")
+                    logger.info("Message DB Called")
                     producer.create(PostECMR(pre.shipment_id))
                 }
-//                    val pre: PreECMR = dee.event
-//                    println(pre.shipment_id)
-//                    val result = Utility.convert(BASE_URI + pre.shipment_id, ASN())
-//                    println(result)
-//                    producer.create(PostECMR(pre.shipment_id))
 
                 }.build()
     }

@@ -2,6 +2,7 @@ package com.tcs.service.controller
 
 //import com.tcs.service.DAO.ShipS
 import com.tcs.service.constant.URLPath
+import com.tcs.service.constant.URLPath.BASE_URI
 import com.tcs.service.constant.URLPath.POST_PUT_DELETE_URI
 import com.tcs.service.model.ASN
 import com.tcs.service.model.ECMR
@@ -21,26 +22,23 @@ import org.springframework.web.bind.annotation.*
 class Controller(private val produce: Producer, private val ecmrRepo: ECMRRepo, private val customRepo: CustomRepository ) {
 
 
-    @RequestMapping("/post",method = [RequestMethod.POST])
-    fun create(@RequestBody createPostECMR: PostECMR) {
 
-    }
 
-    @RequestMapping("/ecmr",method = [RequestMethod.GET])
-    fun getAll(): ResponseEntity<ServiceResponse> {
-       val result = ecmrRepo.findAll()
+//    @RequestMapping("/ecmr",method = [RequestMethod.GET])
+//    fun getAll(): ResponseEntity<ServiceResponse> {
+//       val result = ecmrRepo.findAll()
+//
+//        return ResponseEntity.ok(ServiceResponse("200",
+//                "SUCCESS", result))
+//    }
 
-        return ResponseEntity.ok(ServiceResponse("200",
-                "SUCCESS", result))
-    }
-
-    @RequestMapping("/ecmr/{id}",method = [RequestMethod.GET])
-    fun getECMRData(@PathVariable id: String) {
-
-        val result = Utility.convert(URLPath.BASE_URI + id, ASN())
-        println(result)
-
-    }
+//    @RequestMapping("/ecmr/{id}",method = [RequestMethod.GET])
+//    fun getECMRData(@PathVariable id: String) {
+//
+//        val result = Utility.convert(BASE_URI + id, ASN())
+//        println(result)
+//
+//    }
 
     @RequestMapping("/getdata/{shipId}",method = [RequestMethod.GET])
     fun getByMessageNo(@PathVariable shipId: String): ResponseEntity<ServiceResponse> {

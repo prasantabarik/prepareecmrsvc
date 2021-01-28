@@ -11,7 +11,7 @@ class PrepareJson(private var ecmrRepo: ECMRRepo) {
 
 
     fun manipulation(result: MutableList<ASN>?) {
-        println(result?.size)
+
 
         val posts: MutableList<ASN>? = result
         val ecmrList: MutableList<ECMR> = mutableListOf()
@@ -71,8 +71,8 @@ class PrepareJson(private var ecmrRepo: ECMRRepo) {
             }
         }
 
-        println("ECMR LIST")
-        println(ecmrList)
+//        println("ECMR LIST")
+//        println(ecmrList)
 
         for(i in 0 until ecmrList.size){
             ecmrRepo.save(ecmrList[i])

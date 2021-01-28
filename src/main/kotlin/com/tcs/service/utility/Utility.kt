@@ -5,7 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.registerKotlinModule
 import com.tcs.service.model.ASN
 import org.json.JSONObject
-import khttp.*
+import khttp.get
 
 object Utility {
     fun convert(url: String, objectType: Any): MutableList<ASN>? {
@@ -15,7 +15,7 @@ object Utility {
 
         return when(true) {
             true -> {
-                println("Hi")
+
                 val mapper = ObjectMapper().registerKotlinModule()
                 mapper.enable(DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT)
                 when (objectType) {
