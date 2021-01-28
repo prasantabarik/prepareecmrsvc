@@ -1,6 +1,5 @@
 package com.tcs.service.component
 
-import com.tcs.service.constant.URLPath
 import com.tcs.service.constant.URLPath.SAMPLE_STORE_RESPONSE_JSON_PATH
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -67,5 +66,23 @@ class ControllerTest : BaseTest() {
         println(result)
         JSONAssert.assertEquals(expected, result.response.contentAsString, false)
     }
+
+//    @Test
+//    fun `should respond with put msg`(){
+//        var expected = File(POST_RESPONSE_JSON_PATH).readText(Charsets.UTF_8)
+//        var result: MvcResult =
+//            mockMvc.put(POST_PUT_DELETE_URI)
+//            {
+//                contentType = MediaType.APPLICATION_JSON
+//                content = getBodyJson(ENTITY_RESPONSE_JSON_PATH)
+//            }.andExpect { status { isOk } }.andReturn()
+//
+//        println("EXPECTED")
+//        println(expected)
+//
+//        println("RESULT RESPONSE")
+//        println(result.response.contentAsString)
+//        JSONAssert.assertEquals(expected, result.response.contentAsString, false )
+//    }
 
 }

@@ -1,37 +1,273 @@
 {
-  "id": "70012020-11-211",
-  "storeNumber": 7001,
-  "streamNumber": 1,
-  "deliveryStreamName": "HOUDBAAR",
-  "schemaName": "BASISSCHEMA",
-  "deliveryDateTime": "2020-12-02 16:30:00",
-  "orderDateTime": "2020-12-01 23:00:00",
-  "initialPromotionFlag": "N",
-  "orderStatus": null,
-  "totalInitialOrderQuantity": null,
-  "totalOrderQuantity": null,
-  "boxSize": 90010,
-  "fillDateTime": "2020-12-02 16:30:00",
-  "mainDeliveryFlag": "J",
-  "storeAdviseFlag": "N",
-  "deliverySchemaType": null,
-  "delivererNumber": 2,
-  "startFillTime": "2020-12-02 16:00:00",
-  "storeOrder": [
+  "_id" : "871480687104000008228710400010203",
+  "shipmentId" : "8714806",
+  "messageNo" : "871480687104000008228710400010203",
+  "messageCreationDateTime" : "2021-01-22T12:32:59.068676",
+  "glnShipFrom" : "8710400000822",
+  "glnShipTo" : "8710400010203",
+  "referenceNumberOfTrip" : "Route 16",
+  "yearOfTrip" : "2021",
+  "finishedLoadingDateTime" : "2021-01-05T15:24:28.000+00:00",
+  "arcCodeNeeded" : false,
+  "statusFlag" : "Posted",
+  "orderInShipment" : [
     {
-      "orderNumber": 5236346,
-      "warehouseNumber": 1
+      "referenceNumberPointOfDeparture" : "5359695",
+      "shipUnit" : [
+        {
+          "containerTypeGtinPrimaryContainer" : "8716532016106",
+          "shipUnitSscc" : "387104004655993431",
+          "numberOfPrimaryContainers" : 1,
+          "totalLoadWeight" : 160,
+          "containerInShipItems" : [
+            {
+              "containerTypeGtin" : "8714303000033",
+              "numberOfContainers" : 1
+            },
+            {
+              "containerTypeGtin" : "8714303000064",
+              "numberOfContainers" : 16
+            },
+            {
+              "containerTypeGtin" : "8714303000002",
+              "numberOfContainers" : 6
+            },
+            {
+              "containerTypeGtin" : "8714548154003",
+              "numberOfContainers" : 1
+            },
+            {
+              "containerTypeGtin" : "8714303000026",
+              "numberOfContainers" : 2
+            },
+            {
+              "containerTypeGtin" : "8714303000019",
+              "numberOfContainers" : 8
+            },
+            {
+              "containerTypeGtin" : "8714303000040",
+              "numberOfContainers" : 7
+            }
+          ]
+        },
+        {
+          "containerTypeGtinPrimaryContainer" : "8716532016106",
+          "shipUnitSscc" : "387104004655993097",
+          "numberOfPrimaryContainers" : 1,
+          "totalLoadWeight" : 114,
+          "containerInShipItems" : [
+            {
+              "containerTypeGtin" : "8714303000019",
+              "numberOfContainers" : 10
+            },
+            {
+              "containerTypeGtin" : "8714303000002",
+              "numberOfContainers" : 13
+            }
+          ]
+        },
+        {
+          "containerTypeGtinPrimaryContainer" : "8716532016106",
+          "shipUnitSscc" : "387104004655992250",
+          "numberOfPrimaryContainers" : 1,
+          "totalLoadWeight" : 220,
+          "containerInShipItems" : [
+            {
+              "containerTypeGtin" : "8714303000033",
+              "numberOfContainers" : 10
+            }
+          ]
+        },
+        {
+          "containerTypeGtinPrimaryContainer" : "8716532016106",
+          "shipUnitSscc" : "387104004655993462",
+          "numberOfPrimaryContainers" : 1,
+          "totalLoadWeight" : 156,
+          "containerInShipItems" : [
+            {
+              "containerTypeGtin" : "8714303000019",
+              "numberOfContainers" : 4
+            },
+            {
+              "containerTypeGtin" : "8714548358005",
+              "numberOfContainers" : 4
+            },
+            {
+              "containerTypeGtin" : "8714303000026",
+              "numberOfContainers" : 4
+            },
+            {
+              "containerTypeGtin" : "8714548106002",
+              "numberOfContainers" : 3
+            },
+            {
+              "containerTypeGtin" : "8714548186004",
+              "numberOfContainers" : 1
+            },
+            {
+              "containerTypeGtin" : "8714303000002",
+              "numberOfContainers" : 10
+            }
+          ]
+        },
+        {
+          "containerTypeGtinPrimaryContainer" : "8716532016106",
+          "shipUnitSscc" : "387104004655993417",
+          "numberOfPrimaryContainers" : 1,
+          "totalLoadWeight" : 227,
+          "containerInShipItems" : [
+            {
+              "containerTypeGtin" : "8714303000019",
+              "numberOfContainers" : 3
+            },
+            {
+              "containerTypeGtin" : "8714548186004",
+              "numberOfContainers" : 1
+            },
+            {
+              "containerTypeGtin" : "8714303000033",
+              "numberOfContainers" : 8
+            },
+            {
+              "containerTypeGtin" : "8714303000026",
+              "numberOfContainers" : 5
+            }
+          ]
+        },
+        {
+          "containerTypeGtinPrimaryContainer" : "8716532016106",
+          "shipUnitSscc" : "387104004655993424",
+          "numberOfPrimaryContainers" : 1,
+          "totalLoadWeight" : 189,
+          "containerInShipItems" : [
+            {
+              "containerTypeGtin" : "8714303000033",
+              "numberOfContainers" : 6
+            },
+            {
+              "containerTypeGtin" : "8714303000002",
+              "numberOfContainers" : 3
+            },
+            {
+              "containerTypeGtin" : "8714548111006",
+              "numberOfContainers" : 3
+            },
+            {
+              "containerTypeGtin" : "8714548216008",
+              "numberOfContainers" : 4
+            },
+            {
+              "containerTypeGtin" : "8714303000026",
+              "numberOfContainers" : 2
+            },
+            {
+              "containerTypeGtin" : "8714548358005",
+              "numberOfContainers" : 1
+            }
+          ]
+        },
+        {
+          "containerTypeGtinPrimaryContainer" : "8716532016106",
+          "shipUnitSscc" : "387104004655992236",
+          "numberOfPrimaryContainers" : 1,
+          "totalLoadWeight" : 228,
+          "containerInShipItems" : [
+            {
+              "containerTypeGtin" : "8714303000026",
+              "numberOfContainers" : 1
+            },
+            {
+              "containerTypeGtin" : "8714303000040",
+              "numberOfContainers" : 5
+            },
+            {
+              "containerTypeGtin" : "8714548154003",
+              "numberOfContainers" : 1
+            },
+            {
+              "containerTypeGtin" : "8714303000019",
+              "numberOfContainers" : 2
+            },
+            {
+              "containerTypeGtin" : "8714303000064",
+              "numberOfContainers" : 3
+            }
+          ]
+        },
+        {
+          "containerTypeGtinPrimaryContainer" : "8716532016106",
+          "shipUnitSscc" : "387104004655993448",
+          "numberOfPrimaryContainers" : 1,
+          "totalLoadWeight" : 160,
+          "containerInShipItems" : [
+            {
+              "containerTypeGtin" : "8714303000057",
+              "numberOfContainers" : 2
+            },
+            {
+              "containerTypeGtin" : "8714303000019",
+              "numberOfContainers" : 5
+            },
+            {
+              "containerTypeGtin" : "8714303000026",
+              "numberOfContainers" : 6
+            },
+            {
+              "containerTypeGtin" : "8714548113000",
+              "numberOfContainers" : 1
+            },
+            {
+              "containerTypeGtin" : "8714303000002",
+              "numberOfContainers" : 1
+            }
+          ]
+        },
+        {
+          "containerTypeGtinPrimaryContainer" : "8716532013105",
+          "shipUnitSscc" : "387104004655992298",
+          "numberOfPrimaryContainers" : 1,
+          "totalLoadWeight" : 211,
+          "containerInShipItems" : [
+            {
+              "containerTypeGtin" : "8714548136009",
+              "numberOfContainers" : 1
+            },
+            {
+              "containerTypeGtin" : "8714548186004",
+              "numberOfContainers" : 3
+            },
+            {
+              "containerTypeGtin" : "8714303000040",
+              "numberOfContainers" : 5
+            },
+            {
+              "containerTypeGtin" : "8714303000019",
+              "numberOfContainers" : 2
+            },
+            {
+              "containerTypeGtin" : "8714548154003",
+              "numberOfContainers" : 4
+            },
+            {
+              "containerTypeGtin" : "8714548216008",
+              "numberOfContainers" : 2
+            }
+          ]
+        },
+        {
+          "containerTypeGtinPrimaryContainer" : "8716532013105",
+          "shipUnitSscc" : "387104004655992304",
+          "numberOfPrimaryContainers" : 1,
+          "totalLoadWeight" : 192,
+          "containerInShipItems" : [
+            {
+              "containerTypeGtin" : "8714303000019",
+              "numberOfContainers" : 10
+            }
+          ]
+        }
+      ]
     }
   ],
-  "logisticGroupExclusion": [
-    {
-      "logisticGroupNumber": 123
-    }
-  ],
-  "createdBy": "raghavForTest",
-  "creationDateTime": "2020-11-04 13:05:27",
-  "updatedBy": "pnl0060s",
-  "updateDateTime": "2020-11-04 13:05:27",
-  "isdeleted": false
+  "_class" : "com.tcs.service.model.ECMR"
 }
-

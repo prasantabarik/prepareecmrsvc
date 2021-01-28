@@ -1,11 +1,8 @@
 package com.tcs.service.component
 
-import com.tcs.service.model.ASN
-import com.tcs.service.model.ContainerInShipItems
-import com.tcs.service.model.OrderInShipment
-import com.tcs.service.model.ShipUnit
+import com.tcs.service.model.*
 
-open class BaseTest {
+open class BaseTest() {
 
      public val departureId:String = ""
      public val glnshipfrom:String = ""
@@ -37,9 +34,13 @@ open class BaseTest {
      public val statusFlag: String = "Not Created"
      public val orderInShipment: MutableList<OrderInShipment>? = mutableListOf()
      public val model: ASN = ASN()
+     public val model1: ECMR = ECMR()
+     public val model2: OrderInShipment = OrderInShipment()
+     public val model3: ShipUnit = ShipUnit()
+     public val model4: ContainerInShipItems = ContainerInShipItems()
      public val referenceNumberPointOfDeparture: String = ""
      public val shipUnit: MutableList<ShipUnit>? = mutableListOf()
-
+     
      public val containerTypeGtinPrimaryContainer: String = ""
      public val shipUnitSscc: String = ""
      public val numberOfPrimaryContainers: Int = 0
