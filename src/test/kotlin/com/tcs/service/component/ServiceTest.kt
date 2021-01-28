@@ -10,10 +10,10 @@ import org.junit.Test
 import org.springframework.beans.factory.annotation.Autowired
 import java.util.stream.Collectors
 
-class ServiceTest {
+class ServiceTest(private val prepJson : PrepareJson) {
 
-    @Autowired
-    lateinit var prepJson : PrepareJson
+//    @Autowired
+//    lateinit var
 
 
 
