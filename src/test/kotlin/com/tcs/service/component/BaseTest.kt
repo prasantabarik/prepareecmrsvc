@@ -1,5 +1,8 @@
 package com.tcs.service.component
 
+import com.tcs.service.edt.model.PreECMR
+import com.tcs.service.edt.model.PrepareECMR
+import com.tcs.service.events.PostEcmrEvent
 import com.tcs.service.model.*
 
 open class BaseTest() {
@@ -38,9 +41,13 @@ open class BaseTest() {
      public val model2: OrderInShipment = OrderInShipment()
      public val model3: ShipUnit = ShipUnit()
      public val model4: ContainerInShipItems = ContainerInShipItems()
+     public val model5 : PostEcmrEvent = PostEcmrEvent()
+     public val model6 : PreECMR = PreECMR()
+     public val model7: PrepareECMR = PrepareECMR()
+   
      public val referenceNumberPointOfDeparture: String = ""
      public val shipUnit: MutableList<ShipUnit>? = mutableListOf()
-     
+
      public val containerTypeGtinPrimaryContainer: String = ""
      public val shipUnitSscc: String = ""
      public val numberOfPrimaryContainers: Int = 0

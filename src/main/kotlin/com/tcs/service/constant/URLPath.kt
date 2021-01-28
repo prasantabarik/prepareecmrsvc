@@ -13,8 +13,8 @@ object URLPath {
     const val SAMPLE_RESPONSE_JSON_PATH = "./src/test/resources/contracts/jsons/modelresponse.json"
     const val SAMPLE_CONTRACT_JSON_PATH = "./src/test/resources/contracts/jsons/contract-sample-data.json"
     const val GET_RESPONSE_JSON_PATH = "./src/test/resources/contracts/jsons/getEcmr.json"
-    const val POST_RESPONSE_JSON_PATH = "./src/test/resources/contracts/jsons/postDeliveryMoment.json"
-    const val PUT_RESPONSE_JSON_PATH = "./src/test/resources/contracts/jsons/putDeliveryMoment.json"
+    const val POST_RESPONSE_JSON_PATH = "./src/test/resources/contracts/jsons/postJsonEntity.json"
+    const val PUT_RESPONSE_JSON_PATH = "./src/test/resources/contracts/jsons/postDeliveryMoment.json"
     const val DEL_RESPONSE_JSON_PATH = "./src/test/resources/contracts/jsons/delDeliveryMoment.json"
     const val ENTITY_RESPONSE_JSON_PATH = "./src/test/resources/contracts/jsons/postJsonEntity.json"
 

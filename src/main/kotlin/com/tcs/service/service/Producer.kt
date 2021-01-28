@@ -17,14 +17,7 @@ class Producer {
 @Autowired
 lateinit var  domainEventPublisher: DomainEventPublisher
 
-//fun create(createPostECMR : PostECMR) {
-//  var create = repo.save(createPostECMR)
-//  publishTodoEvent(createPostECMR, PostEcmrEvent(createPostECMR.MessageId))
-//}
-//
-//    fun publishTodoEvent(PostECMR: PostECMR, vararg domainEvents: DomainEvent) {
-//        domainEventPublisher.publish(PostECMR::class.java, PostECMR.MessageId, Arrays.asList(*domainEvents))
-//    }
+
 
     fun create(post: PostECMR) {
         publishTodoEvent(post, PostEcmrEvent(post.ShipmentId))

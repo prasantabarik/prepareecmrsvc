@@ -5,5 +5,5 @@ import javax.persistence.Id
 
 data class PrepareECMR(
         @Id
-        val shipment_id: String
+        val shipment_id: String = ""
 )
