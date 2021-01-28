@@ -1,5 +1,6 @@
 package com.tcs.service.component
 
+import com.tcs.service.model.ASN
 import com.tcs.service.model.ContainerInShipItems
 import com.tcs.service.model.OrderInShipment
 import com.tcs.service.model.ShipUnit
@@ -35,7 +36,7 @@ open class BaseTest {
      public val arcCodeNeeded: Boolean = false
      public val statusFlag: String = "Not Created"
      public val orderInShipment: MutableList<OrderInShipment>? = mutableListOf()
-
+     public val model: ASN = ASN()
      public val referenceNumberPointOfDeparture: String = ""
      public val shipUnit: MutableList<ShipUnit>? = mutableListOf()
 
