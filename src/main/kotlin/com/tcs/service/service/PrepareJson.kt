@@ -9,6 +9,7 @@ import java.util.stream.Collectors
 @Service
 class PrepareJson(private var ecmrRepo: ECMRRepo) {
 
+  //  private lateinit var ecmrRepo1: ECMRRepo
 
     fun manipulation(result: MutableList<ASN>?) {
 

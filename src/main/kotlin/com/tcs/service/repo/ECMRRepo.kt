@@ -7,3 +7,4 @@ interface ECMRRepo: MongoRepository<ECMR, String> {
     fun findByMessageNo(msgNo: String)
 
 }
+

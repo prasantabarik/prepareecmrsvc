@@ -44,7 +44,8 @@ open class BaseTest() {
      public val model5 : PostEcmrEvent = PostEcmrEvent()
      public val model6 : PreECMR = PreECMR()
      public val model7: PrepareECMR = PrepareECMR()
-   
+     public val model8 : PostECMR = PostECMR("message")
+
      public val referenceNumberPointOfDeparture: String = ""
      public val shipUnit: MutableList<ShipUnit>? = mutableListOf()
 
